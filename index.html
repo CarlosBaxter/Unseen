@@ -1,32 +1,77 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="theme-color" content="#050505">
-<title>UNSEEN — Stars Don't Need Titles to Shine</title>
-<meta name="description" content="UNSEEN is looking for people capable of more than their title allows them to show.">
+<title>UNSEEN</title>
 <style>
-*{box-sizing:border-box}body{margin:0;background:#050505;color:#f5f5f2;font-family:Arial,Helvetica,sans-serif}
-main{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px 22px}
-.wrap{width:min(720px,100%);text-align:center}.star{color:#b11226;font-size:58px;line-height:1;margin-bottom:18px}
-.brand{font-size:clamp(42px,12vw,86px);font-weight:900;letter-spacing:.12em;margin:0 0 20px}
-h1{font-size:clamp(28px,7vw,52px);line-height:1.04;margin:0 auto 24px;max-width:680px}
-.intro{color:#b9b9b5;font-size:clamp(17px,4.4vw,21px);line-height:1.55;max-width:590px;margin:0 auto 34px}
-.question{font-size:clamp(20px,5vw,27px);font-weight:700;margin:46px auto 12px}
-.copy{color:#aaa;font-size:16px;line-height:1.6;max-width:540px;margin:0 auto 30px}
-.cta{display:inline-block;background:#b11226;color:#fff;text-decoration:none;font-weight:800;letter-spacing:.08em;padding:17px 28px;border-radius:3px}
-.note{margin-top:20px;color:#6f6f6b;font-size:12px}footer{text-align:center;color:#555;padding:0 20px 30px;font-size:12px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#050505;color:#f6f4ee;font-family:Arial,Helvetica,sans-serif}
+main{max-width:620px;margin:auto;padding:0 22px}
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:45px 0}
+.logo{width:min(64vw,300px);height:auto;display:block;margin:0 auto 25px;border-radius:50%}
+h1{font-size:15px;letter-spacing:.28em;margin:0 0 20px;font-weight:700}
+.tag{font-size:clamp(30px,9vw,48px);line-height:1.02;letter-spacing:-.04em;font-weight:800;margin:0}
+.sub{font-size:17px;line-height:1.55;color:#aaa;margin:24px auto 0;max-width:470px}
+.cta{display:inline-block;margin-top:34px;background:#f6f4ee;color:#050505;text-decoration:none;font-weight:800;padding:16px 25px;border-radius:999px}
+section{padding:75px 0;border-top:1px solid #202020}
+h2{font-size:34px;line-height:1.05;letter-spacing:-.035em;margin:0 0 22px}
+p{color:#aaa;line-height:1.65;font-size:16px}
+.steps{margin-top:30px}
+.step{padding:20px 0;border-top:1px solid #202020}
+.step b{display:block;color:#f6f4ee;font-size:18px;margin-bottom:5px}
+form{margin-top:30px}
+label{display:block;font-size:11px;text-transform:uppercase;letter-spacing:.1em;color:#888;margin:19px 0 7px}
+input,textarea{width:100%;background:#0b0b0b;border:1px solid #292929;border-radius:10px;padding:14px;color:#fff;font:inherit;font-size:16px}
+textarea{min-height:100px;resize:vertical}
+button{width:100%;margin-top:24px;border:0;border-radius:999px;padding:16px;background:#f6f4ee;color:#050505;font-weight:800}
+.small{font-size:11px;color:#666;text-align:center;margin-top:12px}
+.success{display:none;text-align:center;padding:35px 0}
+footer{text-align:center;padding:35px 0 45px;color:#555;font-size:11px}
 </style>
 </head>
 <body>
-<main><div class="wrap">
-<div class="star">★</div><div class="brand">UNSEEN</div>
-<h1>STARS DON'T NEED TITLES TO SHINE.</h1>
-<p class="intro">For people who know they're capable of more than their job title allows them to show.</p>
-<p class="question">Do you feel UNSEEN?</p>
-<p class="copy">Tell us what you can do. What you've learned. What you've built. What you could create if you had the right people around you.</p>
-<a class="cta" href="#" id="apply">BECOME A STAR</a>
-<p class="note">Your title is not your potential.</p>
-</div></main><footer>UNSEEN</footer>
-<script>document.getElementById('apply').addEventListener('click',function(e){if(this.getAttribute('href')==='#'){e.preventDefault();alert('Applications opening soon.')}});</script>
+<main>
+<section class="hero">
+  <img class="logo" src="unseen-logo.png" alt="UNSEEN logo">
+  <h1>UNSEEN</h1>
+  <p class="tag">Stars don't need<br>titles to shine.</p>
+  <p class="sub">For people who know they are capable of more than their job allows them to show.</p>
+  <a class="cta" href="#join">BECOME A STAR</a>
+</section>
+
+<section>
+  <h2>Talent is everywhere.<br>Opportunity isn't.</h2>
+  <p>UNSEEN looks for people whose ability goes beyond their title. When the right opportunity appears, the right people come together to explore it and build.</p>
+  <div class="steps">
+    <div class="step"><b>Show us what you can do.</b><span>Not just what your job title says you do.</span></div>
+    <div class="step"><b>Stay on our radar.</b><span>We look for the right people when an opportunity appears.</span></div>
+    <div class="step"><b>Build when it makes sense.</b><span>Explore the opportunity together and see if it can become something real.</span></div>
+  </div>
+</section>
+
+<section id="join">
+  <h2>Become a Star.</h2>
+  <p>No perfect CV required. Tell us what you can really do.</p>
+  <form id="f">
+    <label>Name or alias</label><input required name="name">
+    <label>Your Star name</label><input required name="star" placeholder="Sirius, Vega, Mira…">
+    <label>Email</label><input required type="email" name="email">
+    <label>Phone</label><input type="tel" name="phone">
+    <label>What are you really good at?</label><textarea required name="talent"></textarea>
+    <label>What could you build with the right people?</label><textarea name="build"></textarea>
+    <button>SEND YOUR SIGNAL ✦</button>
+    <div class="small">Prototype only — this form does not send data yet.</div>
+  </form>
+  <div class="success" id="ok"><h2>✦</h2><p>Your signal has been seen.</p></div>
+</section>
+<footer>UNSEEN · Stars don't need titles to shine.</footer>
+</main>
+<script>
+document.getElementById('f').addEventListener('submit',e=>{
+ e.preventDefault();e.currentTarget.style.display='none';document.getElementById('ok').style.display='block'
+});
+</script>
 </body></html>
